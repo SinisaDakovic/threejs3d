@@ -1,0 +1,107 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    overflow: hidden;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.loadingBar{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scaleX(0);
+    width: 100%;
+    transform-origin: top left;
+    height: 2px;
+    z-index: 100;
+    background-color: white;
+    transition: transform 300ms ease;
+}
+
+.loadingBar.ended{
+    transform:scaleX(0);
+    transform-origin:top right;
+    transition: transform 1.5s ease-in-out;
+}
+
+
+.point:hover .text{
+    opacity: 1;
+}
+.point{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 1em;
+    
+}
+
+.load{
+    position: absolute;
+    inset: 0;
+    background-color: #000000;
+    opacity: 1;
+    transition: opacity 4s ease;
+}
+.load.end{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+.point .label{
+    position: absolute;
+    background-color: #00000077;
+    border-radius: 50%;
+    top: -50px;
+    left: 130px;
+    display: inline-block;
+    color: white;
+    padding: .5em .8em;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 19px;
+    cursor: help;
+    border: 1px solid #00000077;
+    transform: scale(0);
+    transition: transform 500ms ease-in;
+}
+
+.point.visible .label{
+    transform:scale(1);
+
+}
+
+
+
+.text{
+    width: 30ch;
+    position: absolute;
+    background-color: rgba(46, 46, 46, 0.4);
+    padding: .5em;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 1.6;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    transition: opacity 300ms ease-in;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/*# sourceMappingURL=main.css.map*/
